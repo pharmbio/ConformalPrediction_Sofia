@@ -32,8 +32,8 @@ def numeric_columns(df_cellline, df_merged):
     print(f'Removed features with missing values: remaining {X.shape[1]}')
 
     # Exclude features with low standard deviation
-    X = X.loc[:, (X.std() > 0.0001)]
-    print(f'Excluded features with SD < 0.0001: remaining {X.shape[1]}')
+    X = X.loc[:, (X.std() > 0.001)]
+    print(f'Excluded features with SD < 0.001: remaining {X.shape[1]}')
 
     # Create a list of remaining varying features
     varying_features = list(X.columns)
